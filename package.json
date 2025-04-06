@@ -1,19 +1,20 @@
 {
-	"name": "appolobot",
-	"version": "1.0.0",
-	"type": "module",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "nodemon ./index.js && nodemon config.js",
-		"start2": "node ./index.js && node config.js"
-	},
-	"author": "",
-	"license": "ISC",
 	"dependencies": {
+		"crypto-js": "^4.2.0",
+		"express": "^4.21.2",
 		"node-cron": "^3.0.3",
 		"node-telegram-bot-api": "^0.66.0",
 		"nodemon": "^3.1.7",
-		"openai": "^4.71.1"
-	}
+		"openai": "^4.75.0"
+	},
+	"name": "bogdan_bot",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon ./index.js && nodemon ./tgterminal.js && nodemon config.js",
+		"start2": "node ./index.js && node ./tgterminal.js && node config.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": ""
 }
