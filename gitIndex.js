@@ -239,7 +239,7 @@ async function menu(chatId, afterFirstMeeting = false) {
 
 //
 
-// total lines of code: 1500
+// total lines of code: 1900
 
 //
 
