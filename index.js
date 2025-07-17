@@ -21,7 +21,6 @@ import {
 	sendDataAboutError,
 	sendDataAboutDataBase,
 } from "./tgterminal.js";
-import { log } from "console";
 
 // digfusion
 
@@ -1205,11 +1204,11 @@ async function assistantResponse(chatId, request, thinkingMessage = true) {
 
 			let response = messages.data
 				.find((obj) => obj.role == "assistant")
-				.content[0].text.value.replace("```", "")
-				.replace("```", "")
-				.replace("json", "")
-				.replace("JSON", "")
-				.replace(/\【.*?】/g, "");
+				.content[0].text.value.replaceAll("```", "")
+				.replaceAll("```", "")
+				.replaceAll("json", "")
+				.replaceAll("JSON", "")
+				.replaceAll(/\【.*?】/g, "");
 
 			console.log(response);
 
